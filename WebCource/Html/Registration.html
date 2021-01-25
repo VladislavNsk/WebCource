@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Регистрация</title>
+</head>
+<body>
+    <h3>Регистрация</h3>
+    <hr />
+
+    <form id="main_form" method="get">
+        <p>Имя: <input name="name" placeholder="Введите имя" type="text" required></p>
+        <p>О себе: <textarea name="about_me" placeholder="Чем вы занимаетесь?"></textarea></p>
+        <p>
+            Образование:
+            <label>
+                Среднее <input value="middle" checked="checked" name="education" type="radio" />
+            </label>
+
+            <label>
+                Средне-специальное  <input value="vocational" name="education" type="radio" />
+            </label>
+
+            <label>
+                Высшее <input value="higher" name="education" type="radio" />
+            </label>
+        </p>
+        <p>
+            Какие языки вы знаете:
+            <label>
+                Русский <input value="rus" checked="checked" name="language" type="checkbox" />
+            </label>
+
+            <label>
+                Английский <input value="en" name="language" type="checkbox" />
+            </label>
+
+            <label>
+                Немецкий <input value="ger" name="language" type="checkbox" />
+            </label>
+        </p>
+        <p>
+            Любимые жанры кино:
+            <select form="main_form" name="genre" size="3" multiple>
+                <option value="comedy">Комедия </option>
+                <option value="horror">Ужасы</option>
+                <option value="thriller">Боевик</option>
+            </select>
+        </p>
+        <p>
+            Город проживания:
+            <select form="main_form" name="city">
+                <option value="nsk">Новосибирск </option>
+                <option value="msk">Москва</option>
+                <option value="spb">Санкт-Петербург</option>
+            </select>
+        </p>
+        <input type="submit" value="Зарегистрироваться" />
+    </form>
+
+    <hr />
+    <a href="./AboutUs.html">О нас</a>
+</body>
+</html>

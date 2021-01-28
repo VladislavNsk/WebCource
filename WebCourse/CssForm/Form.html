@@ -7,36 +7,30 @@
     <link href="Form.css" rel="stylesheet" />
 </head>
 <body>
-<div class="container">
-    <h1>Отправить заявку</h1>
-    <form class="main_form" method="get">
-        <label>
-            Ваше имя
-            <div class="name">
+    <div class="container">
+        <h1>Отправить заявку</h1>
+        <form class="clearfix" method="get">
+            <div class="input">
+                Ваше имя
                 <input placeholder="Ваше имя *" name="name" type="text" />
             </div>
-        </label>
-        <label>
-            Ваш номер телефона
-            <div class="phone">
+            <div class="input">
+                Ваш номер телефона
                 <input placeholder="Ваш номер телефона *" name="phone" type="text" />
             </div>
-        </label>
-        <label>
-            Ваш email или VK
-            <div class="email">
+            <div class="input">
+                Ваш email или VK
                 <input placeholder="Ваш email или VK" name="email" type="text" />
             </div>
-        </label>
-        <label>
-            Комментарий
-            <div class="comment">
-                <input placeholder="Комментарий (не обязательно)" name="comment" type="text" />
+            <div class="input">
+                Комментарий
+                <div class="comment">
+                    <textarea placeholder="Комментарий (не обязательно)" name="comment"></textarea>
+                </div>
             </div>
-        </label>
-        <p>Заполните и отправьте форму, и мы перезвоним Вам по указанному номеру</p>
-        <input value="Отправить заявку" type="submit"/>
-    </form>
-</div>
+            <div class="input last_div">Заполните и отправьте форму, и мы перезвоним Вам по указанному номеру</div>
+            <input class="button" value="Отправить заявку" type="submit" />
+        </form>
+    </div>
 </body>
 </html>

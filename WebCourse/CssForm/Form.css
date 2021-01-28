@@ -1,8 +1,63 @@
 ﻿.container {
     margin: 0 auto;
-    max-width: 858px;
+    max-width: 845px;
+    font-family: "arial";
+    color: #918e88;
+}
+
+.container h1 {
+    font-size: 33px;
+    font-weight: 500;
+    margin: 5px 19px;
 }
 
 .container form {
     background-color: #feeed6;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    max-height: 535px;
+}
+
+div.input {
+    margin-bottom: 20px;
+}
+
+.container input, .comment textarea {
+    width: 100%;
+    padding: 9px 15px;
+    margin-top: 9px;
+    font-size: 17px;
+    border: 0;
+    font-family: "arial";
+}
+
+.comment textarea {
+    height: 130px;
+}
+
+.input {
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.last_div {
+    font-size: 17px;
+    font-weight: 500;
+}
+
+input.button {
+    display: inline-block;
+    width: auto;
+    background-color: #378db2;
+    color: white;
+    float: right;
+    font-weight: bold;
+    margin-top: -5px;
+}
+
+.clearfix:after {
+    display: block;
+    content: "";
+    clear: both;
 }

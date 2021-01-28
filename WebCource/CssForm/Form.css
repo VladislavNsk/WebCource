@@ -1,0 +1,8 @@
+﻿.container {
+    margin: 0 auto;
+    max-width: 858px;
+}
+
+.container form {
+    background-color: #feeed6;
+}

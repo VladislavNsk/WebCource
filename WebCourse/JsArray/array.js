@@ -3,22 +3,22 @@
 
     function sortArray(array) {
         array.sort((a, b) => a - b);
-        console.log("Отсортированный массив: " + numbers);
+        console.log("Отсортированный массив: ", numbers);
     }
 
     function printFirst5Items(array) {
         var first5Items = array.slice(0, 5);
-        console.log("Первые пять элементов массива: " + first5Items);
+        console.log("Первые пять элементов массива: ", first5Items);
     }
 
     function printLast5Items(array) {
         var last5Items = array.slice(numbers.length - 5);
-        console.log("Последние пять элементов массива: " + last5Items);
+        console.log("Последние пять элементов массива: ", last5Items);
     }
 
     function printEvenNumbersSum(array) {
         var evenNumbersSum = array.filter(x => x % 2 === 0).reduce((sum, item) => sum + item);
-        console.log("Сумма четных чисел массива: " + evenNumbersSum);
+        console.log("Сумма четных чисел массива: ", evenNumbersSum);
     }
 
     sortArray(numbers);
@@ -38,7 +38,7 @@
             baseArray[i] = i + 1;
         }
 
-        console.log("Массив из 100 чисел: " + baseArray);
+        console.log("Массив из 100 чисел: ", baseArray);
     }
 
     function getEvenSquaresNumbers(array) {
@@ -48,7 +48,7 @@
     createArray();
 
     var evenSquaresNumbers = getEvenSquaresNumbers(baseArray);
-    console.log("Массив квадратов четных чисел: " + evenSquaresNumbers);
+    console.log("Массив квадратов четных чисел: ", evenSquaresNumbers);
 })();
 
 

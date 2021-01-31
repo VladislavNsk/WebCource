@@ -52,10 +52,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="CssReset.css" />
+    <Content Include="Css\CssReset.css" />
     <Content Include="Web.config" />
     <Content Include="WebCource.html" />
-    <Content Include="WebCourceStyle.css" />
+    <Content Include="Css\WebCourceStyle.css" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />

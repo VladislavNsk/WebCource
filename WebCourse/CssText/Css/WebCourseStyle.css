@@ -1,0 +1,51 @@
+﻿body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #feeed6;
+    color: #676565;
+}
+
+.container {
+    padding: 9px;
+    max-width: 856px;
+    margin: 0 auto;
+}
+
+.line_through {
+    text-decoration: line-through;
+}
+
+.container h1 {
+    font-size: 32px;
+    line-height: 1.1;
+}
+
+.header {
+    color: #378DB2;
+    font-weight: bold;
+    text-indent: 0;
+    font-weight: 600;
+}
+
+.info_block {
+    margin-top: 9px;
+}
+
+    .info_block p {
+        font-size: 19px;
+        line-height: 32px;
+    }
+
+        .info_block p:last-child {
+            margin-top: 4px;
+        }
+
+.content_block {
+    margin-top: 2px;
+}
+
+    .content_block p {
+        font-size: 18px;
+        text-indent: 1em;
+        line-height: 25px;
+        margin-bottom: 9px;
+    }

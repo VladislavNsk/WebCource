@@ -54,8 +54,8 @@
   <ItemGroup>
     <Content Include="Css\CssReset.css" />
     <Content Include="Web.config" />
-    <Content Include="WebCource.html" />
-    <Content Include="Css\WebCourceStyle.css" />
+    <Content Include="WebCourse.html" />
+    <Content Include="Css\WebCourseStyle.css" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />

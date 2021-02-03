@@ -1,10 +1,10 @@
-﻿div.container {
+﻿.container {
     margin: 0 auto;
     max-width: 858px;
 }
 
-table.main_table {
-    font-family: "arial";
+.main_table {
+    font-family: Arial, Helvetica, sans-serif;
     border: 1px solid #eeeeee;
     width: 100%;
     font-size: 21px;

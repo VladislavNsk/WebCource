@@ -1,7 +1,7 @@
 ﻿.container {
     margin: 0 auto;
     max-width: 845px;
-    font-family: "arial";
+    font-family: Arial, Helvetica, sans-serif;
     color: #918e88;
 }
 
@@ -19,7 +19,7 @@
     max-height: 535px;
 }
 
-div.input {
+.input {
     margin-bottom: 20px;
 }
 
@@ -46,7 +46,7 @@ div.input {
     font-weight: 500;
 }
 
-input.button {
+#button {
     display: inline-block;
     width: auto;
     background-color: #378db2;

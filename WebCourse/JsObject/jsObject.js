@@ -1,79 +1,98 @@
 ﻿"use strict";
 
 (function () {
-    function City(name, population) {
-        this.name = name;
-        this.population = population;
-    }
-
-    function Country(name) {
-        this.name = name;
-        this.cities = [];
-    }
-
-    var russia = new Country("Россия");
-    russia.cities = [
-        new City("Новосибирск", 1511000),
-        new City("Москва", 11920000),
-        new City("Томск", 550000)
-    ];
-
-    var germany = new Country("Германия");
-    germany.cities = [
-        new City("Берлин", 3769000),
-        new City("Мюнхен", 1472000),
-        new City("Гамбург", 1845000),
-        new City("Кёльн", 1061000)
-    ];
-
-    var poland = new Country("Польша");
-    poland.cities = [
-        new City("Варшава", 1708000),
-        new City("Краков", 779115),
-        new City("Гдальск", 585000),
-        new City("Врослав", 650000)
-    ];
-
     var countries = [
-        russia,
-        germany,
-        poland
+        {
+            country: "Германия",
+            cities: [
+                {
+                    city: "Берлин",
+                    population: 3769000
+                },
+                {
+                    city: "Мюнхен",
+                    population: 1472000
+                },
+                {
+                    city: "Гамбург",
+                    population: 1845000
+                },
+                {
+                    city: "Кёльн",
+                    population: 1061000
+                }
+            ]
+        },
+        {
+            country: "Польша",
+            cities: [
+                {
+                    city: "Варшава",
+                    population: 1708000
+                },
+                {
+                    city: "Краков",
+                    population: 779115
+                },
+                {
+                    city: "Гдальск",
+                    population: 585000
+                },
+                {
+                    city: "Врослав",
+                    population: 650000
+                }
+            ]
+        },
+        {
+            country: "Russia",
+            cities: [
+                {
+                    city: "Новосибирск",
+                    population: 1511000
+                },
+                {
+                    city: "Москва",
+                    population: 11920000
+                },
+                {
+                    city: "Томск",
+                    population: 550000
+                }
+            ]
+        }
     ];
 
-    countries.forEach(x => console.log(x));
-    printCountriesWithMaxCitiesCount();
+    countries.forEach(function (item) {
+        console.log(item);
+    });
 
-    function printCountriesWithMaxCitiesCount() {
-
-        var countriesWithMaxCitiesCount = [];
-
-        countries.forEach(item => {
-            if (countriesWithMaxCitiesCount.length === 0) {
-                countriesWithMaxCitiesCount.push(item);
-            } else if (countriesWithMaxCitiesCount[0].cities.length === item.cities.length) {
-                countriesWithMaxCitiesCount.push(item);
-            } else if (countriesWithMaxCitiesCount[0].cities.length < item.cities.length) {
-                countriesWithMaxCitiesCount = [item];
-            }
-        });
-
-        console.log("Страна/страны с максимальным числом городов:", countriesWithMaxCitiesCount);
+    function getCountriesWithMaxCitiesCount() {
+        return countries
+            .sort(function (a, b) {
+                return a.cities.length + b.cities.length;
+            })
+            .filter(function (item) {
+                return item.cities.length === countries[0].cities.length;
+            });
     }
 
-    var countriesInfo = getCountriesInfo();
-    console.log(countriesInfo);
+    var countriesWithMaxCitiesCount = getCountriesWithMaxCitiesCount();
+    console.log("Страна/страны с максимальным числом городов:", countriesWithMaxCitiesCount);
 
     function getCountriesInfo() {
         var tempCountriesInfo = {};
 
-        for (var country in countries) {
-            if (Object.prototype.hasOwnProperty.call(countries, country)) {
-                tempCountriesInfo[countries[country].name] = countries[country].cities.
-                    map(city => city.population).
-                    reduce((sum, population) => sum + population);
-            }
-        }
+        countriesWithMaxCitiesCount.forEach(function (item) {
+
+            tempCountriesInfo[item.country] = item.cities.reduce(function (sum, city) {
+                return sum + city.population;
+            }, 0);
+        });
 
         return tempCountriesInfo;
     }
+
+    var countriesInfo = getCountriesInfo();
+    console.log(countriesInfo);
 })();

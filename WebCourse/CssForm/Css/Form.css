@@ -2,62 +2,66 @@
     margin: 0 auto;
     max-width: 845px;
     font-family: Arial, Helvetica, sans-serif;
-    color: #918e88;
+    color: #676567;
 }
 
-.container h1 {
-    font-size: 33px;
-    font-weight: 500;
-    margin: 5px 19px;
-}
+    .container h1 {
+        font-size: 33px;
+        font-weight: 500;
+        margin: 5px 19px;
+    }
 
-.container form {
-    background-color: #feeed6;
-    padding: 20px;
-    font-size: 18px;
-    font-weight: bold;
-    max-height: 535px;
-}
+    .container form {
+        background-color: #feeed6;
+        padding: 20px;
+        font-size: 18px;
+        font-weight: bold;
+        max-height: 535px;
+    }
 
-.input {
-    margin-bottom: 20px;
-}
+    .container .input {
+        margin-bottom: 20px;
+        font-size: 17px;
+        font-weight: 600;
+    }
 
-.container input, .comment textarea {
-    width: 100%;
-    padding: 9px 15px;
-    margin-top: 9px;
-    font-size: 17px;
-    border: 0;
-    font-family: "arial";
-}
+    .container input,
+    .container .comment textarea {
+        width: 100%;
+        padding: 9px 15px;
+        margin-top: 9px;
+        font-size: 17px;
+        border: 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
 
-.comment textarea {
-    height: 130px;
-}
+    .container .comment textarea {
+        height: 130px;
+        resize: vertical;
+    }
 
-.input {
-    font-size: 17px;
-    font-weight: 600;
-}
+    .container .text {
+        font-size: 17px;
+        font-weight: 500;
+    }
 
-.last_div {
-    font-size: 17px;
-    font-weight: 500;
-}
+    .container input[type="submit"] {
+        display: inline-block;
+        width: auto;
+        background-color: #378db2;
+        color: #fff;
+        float: right;
+        font-weight: bold;
+        margin-top: -5px;
+    }
 
-#button {
-    display: inline-block;
-    width: auto;
-    background-color: #378db2;
-    color: white;
-    float: right;
-    font-weight: bold;
-    margin-top: -5px;
-}
+        .container input[type="submit"]:hover {
+            cursor: pointer;
+            background-color: #20769b;
+        }
 
-.clearfix:after {
-    display: block;
-    content: "";
-    clear: both;
-}
+    .container .clearfix:after {
+        display: block;
+        content: "";
+        clear: both;
+    }

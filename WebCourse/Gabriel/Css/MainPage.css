@@ -1,0 +1,109 @@
+﻿body {
+    font-family: "arial";
+}
+
+.main_container {
+    padding: 45px 58px;
+    max-width: 1025px;
+}
+
+.inner_container {
+    border: 1px solid;
+}
+
+.small {
+    font-size: 12px;
+}
+
+/* СЛАЙДЕР*/
+.slider {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    font-size: 20px;
+    background-color: #f7cf45;
+}
+
+.slider_item {
+    width: 14%;
+    text-align: center;
+    outline-width: thin;
+    border-right: solid 1px;
+}
+
+    .slider_item a {
+        text-decoration: none;
+    }
+
+    .slider_item:first-child {
+        text-decoration: underline;
+    }
+
+    .slider_item:last-child {
+        border-right: none;
+    }
+
+    .slider_item a:hover {
+        text-decoration: underline;
+    }
+
+    .slider_item:first-child {
+        text-decoration: underline;
+    }
+
+    .slider_item a.current {
+        color: red;
+    }
+
+/*ТАБЛИЦА*/
+.table_container {
+    font-size: 12px;
+    height: 80px;
+    border: 1px solid;
+    padding: 10px;
+    background-color: red;
+}
+
+    .table_container table {
+        width: 100%;
+        border: 1px solid;
+    }
+
+    .table_container tbody,
+    .table_container thead > tr {
+        display: block;
+    }
+
+.table_container tbody {
+    overflow: auto;
+}
+
+.contaiener_button {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+
+    .contaiener_button div {
+        margin-left: 10px;
+    }
+
+        .contaiener_button div:first-child {
+            margin-right: auto;
+            margin-left: 0;
+        }
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.header_table div {
+    display: flex;
+    float: right;
+}
+
+    .header_table div:first-child {
+        float: left;
+    }

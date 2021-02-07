@@ -1,0 +1,47 @@
+﻿body {
+    font-size: 15px;
+}
+
+header {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.container {
+    max-width: 600px;
+    min-height: 200px;
+    border: black 3px solid;
+    background-color: #a0c8c8;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+    .container .inputs_container {
+        display: flex;
+        flex: 1;
+        align-items: center;
+    }
+
+.input_container + .input_container {
+    margin-left: 100px;
+}
+
+.container .result {
+    margin-bottom: 10px;
+}
+
+    .container .result:last-child {
+        margin-bottom: 0;
+    }
+
+.container .button_container {
+    margin-bottom: 15px;
+}
+
+.error {
+    color: #ff0000;
+    font-size: 12px;
+}

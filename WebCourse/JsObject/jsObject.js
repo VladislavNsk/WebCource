@@ -3,89 +3,92 @@
 (function () {
     var countries = [
         {
-            country: "Германия",
+            name: "Германия",
             cities: [
                 {
-                    city: "Берлин",
+                    name: "Берлин",
                     population: 3769000
                 },
                 {
-                    city: "Мюнхен",
+                    name: "Мюнхен",
                     population: 1472000
                 },
                 {
-                    city: "Гамбург",
+                    name: "Гамбург",
                     population: 1845000
                 },
                 {
-                    city: "Кёльн",
+                    name: "Кёльн",
                     population: 1061000
                 }
             ]
         },
         {
-            country: "Польша",
+            name: "Польша",
             cities: [
                 {
-                    city: "Варшава",
+                    name: "Варшава",
                     population: 1708000
                 },
                 {
-                    city: "Краков",
+                    name: "Краков",
                     population: 779115
                 },
                 {
-                    city: "Гдальск",
+                    name: "Гдальск",
                     population: 585000
                 },
                 {
-                    city: "Врослав",
+                    name: "Врослав",
                     population: 650000
                 }
             ]
         },
         {
-            country: "Russia",
+            name: "Russia",
             cities: [
                 {
-                    city: "Новосибирск",
+                    name: "Новосибирск",
                     population: 1511000
                 },
                 {
-                    city: "Москва",
+                    name: "Москва",
                     population: 11920000
                 },
                 {
-                    city: "Томск",
+                    name: "Томск",
                     population: 550000
                 }
             ]
         }
     ];
 
-    countries.forEach(function (item) {
-        console.log(item);
+    countries.forEach(function (country) {
+        console.log(country);
     });
 
-    function getCountriesWithMaxCitiesCount() {
-        return countries
-            .sort(function (a, b) {
-                return a.cities.length + b.cities.length;
-            })
-            .filter(function (item) {
-                return item.cities.length === countries[0].cities.length;
-            });
+    function getCountriesWithMaxCitiesCount(countriesArray) {
+        var maxCitiesCount = countriesArray.reduce(function (result, country) {
+            if (country.cities.count > result.cities.count) {
+                result = country;
+            }
+
+            return result;
+        }).cities.length;
+
+        return countriesArray.filter(function (country) {
+            return country.cities.length === maxCitiesCount;
+        });
     }
 
-    var countriesWithMaxCitiesCount = getCountriesWithMaxCitiesCount();
+    var countriesWithMaxCitiesCount = getCountriesWithMaxCitiesCount(countries);
     console.log("Страна/страны с максимальным числом городов:", countriesWithMaxCitiesCount);
 
-    function getCountriesInfo() {
+    function getCountriesInfo(countriesArray) {
         var tempCountriesInfo = {};
 
-        countriesWithMaxCitiesCount.forEach(function (item) {
-
-            tempCountriesInfo[item.country] = item.cities.reduce(function (sum, city) {
+        countriesArray.forEach(function (item) {
+            tempCountriesInfo[item.name] = item.cities.reduce(function (sum, city) {
                 return sum + city.population;
             }, 0);
         });
@@ -93,6 +96,6 @@
         return tempCountriesInfo;
     }
 
-    var countriesInfo = getCountriesInfo();
+    var countriesInfo = getCountriesInfo(countries);
     console.log(countriesInfo);
 })();

@@ -16,13 +16,12 @@
         padding: 20px;
         font-size: 18px;
         font-weight: bold;
-        max-height: 535px;
     }
 
     .container .input {
         margin-bottom: 20px;
         font-size: 17px;
-        font-weight: 600;
+        font-weight: bold;
     }
 
     .container input,
@@ -41,8 +40,9 @@
     }
 
     .container .text {
-        font-size: 17px;
-        font-weight: 500;
+        font-size: 16px;
+        font-weight: normal;
+        margin-bottom: 0;
     }
 
     .container input[type="submit"] {
@@ -52,7 +52,6 @@
         color: #fff;
         float: right;
         font-weight: bold;
-        margin-top: -5px;
     }
 
         .container input[type="submit"]:hover {

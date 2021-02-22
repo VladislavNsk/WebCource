@@ -52,7 +52,7 @@
     var numbersArray = createArray();
     console.log("Массив из 100 чисел: ", numbersArray);
 
-    function getSquaresEvenNumbers(array) {
+    function getEvenNumbersSquares(array) {
         return array
             .filter(function (item) {
                 return item % 2 === 0;
@@ -62,6 +62,6 @@
             });
     }
 
-    var squaresEvenNumbers = getSquaresEvenNumbers(numbersArray);
-    console.log("Массив квадратов четных чисел: ", squaresEvenNumbers);
+    var evenNumbersSquares = getEvenNumbersSquares(numbersArray);
+    console.log("Массив квадратов четных чисел: ", evenNumbersSquares);
 })();

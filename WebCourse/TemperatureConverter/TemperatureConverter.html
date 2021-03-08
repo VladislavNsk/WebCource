@@ -5,21 +5,20 @@
     <title>Temperature converter</title>
     <link rel="stylesheet" href="Css/CssReset.css" />
     <link href="Css/TemperatureConverter.css" rel="stylesheet" />
-    <script defer src="Scripts/Script.js"></script>
 </head>
 <body>
     <div class="container">
         <h1>Конвертер температуры</h1>
         <div class="inputs_container">
             <div class="input_container">
-                <label><input id="celcius" type="text" placeholder="Введите градусы Цельсия" /> °C</label>
+                <label><input id="celsius" type="text" placeholder="Введите градусы Цельсия" /> °C</label>
             </div>
             <div class="input_container">
                 <div class="result">
                     <label><input id="kelvin" type="text" disabled="disabled" /> K</label>
                 </div>
                 <div class="result">
-                    <label><input id="farengeit" type="text" disabled="disabled" /> °F</label>
+                    <label><input id="fahrenheit" type="text" disabled="disabled" /> °F</label>
                 </div>
             </div>
         </div>
@@ -27,5 +26,6 @@
             <button type="button" id="button"> Конвертировать</button>
         </div>
     </div>
+    <script src="Scripts/Script.js"></script>
 </body>
 </html>

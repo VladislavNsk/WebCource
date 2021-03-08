@@ -69,16 +69,10 @@
 
     function getCountriesWithMaxCitiesCount(countriesArray) {
         var maxCitiesCount = countriesArray.reduce(function (result, country) {
-            if (country.cities.length > result) {
-                result = country.cities.length;
-            }
-
-            return result;
+            return Math.max(result, country.cities.length);
         }, 0);
 
-        var tempcountriesArray = countriesArray;
-
-        return tempcountriesArray.filter(function (country) {
+        return countriesArray.filter(function (country) {
             return country.cities.length === maxCitiesCount;
         });
     }
